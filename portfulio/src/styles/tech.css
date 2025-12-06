@@ -1,0 +1,101 @@
+/* ================================
+   PREMIUM SKILLS SECTION
+================================ */
+
+.skills-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Heading */
+.skills-header {
+  margin-bottom: 40px;
+}
+
+.skills-title {
+  font-size: 38px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #0d6efd, #67c8ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.skills-subtitle {
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+/* Grid Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Card Design */
+.skill-card {
+  padding: 22px;
+  border-radius: 18px;
+
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+/* Hover Glow + 3D Lift */
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 132, 255, 0.35);
+}
+
+/* Icons */
+.skill-icon-wrap {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.skill-icon {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.skill-name {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+/* Fade animation */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: calc(var(--i) * 0.05s);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .skills-title {
+    font-size: 30px;
+  }
+
+  .skill-card {
+    padding: 18px;
+  }
+}

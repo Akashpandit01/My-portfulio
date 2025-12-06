@@ -1,0 +1,196 @@
+/* ---------------------------
+   Premium Resume Section
+--------------------------- */
+
+.resume-section {
+  padding: 70px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.resume-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #0d6efd, #68cfff);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+/* Main Layout */
+.resume-wrapper {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 30px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* LEFT SIDE */
+.profile-box {
+  text-align: center;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.role {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 6px 0;
+  opacity: 0.9;
+}
+
+.resume-links {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.resume-links a {
+  background: #0d6efd;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.resume-links a:hover {
+  background: #1a7bff;
+}
+
+/* Skills */
+.skills-section h3 {
+  margin-bottom: 10px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.skills-grid p {
+  background: rgba(255, 255, 255, 0.09);
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* RIGHT SIDE */
+
+/* Card titles */
+.card-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #68cfff;
+  font-weight: 700;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin-left: 15px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 25px;
+}
+
+.timeline-item .circle {
+  position: absolute;
+  left: -5px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  background-color: #0d6efd;
+  border-radius: 50%;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 15px;
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.timeline-content h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.timeline-content span {
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.timeline-content ul {
+  margin-top: 6px;
+  padding-left: 20px;
+}
+
+/* Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 0.7s forwards;
+}
+
+
+
+/* Download Button */
+.download-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  background: linear-gradient(90deg, #0d6efd, #66c2ff);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 110, 255, 0.4);
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 110, 255, 0.6);
+}
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .resume-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,147 @@
+/* ==========================
+   PREMIUM PROJECTS SECTION
+========================== */
+
+.projects {
+  padding: 60px 0;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.section-subtitle {
+  color: #b2b2b2;
+  font-size: 15px;
+}
+
+/* GRID */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 28px;
+}
+
+/* PREMIUM CARD */
+.premium-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  padding: 22px;
+  backdrop-filter: blur(16px);
+  transition: 0.3s ease;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient glow border */
+.premium-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  padding: 2px;
+  background: linear-gradient(135deg, #0d6efd, #6bc8ff);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  transition: 0.4s ease;
+  opacity: 0;
+}
+
+.premium-card:hover::before {
+  opacity: 1;
+}
+
+/* 3D Tilt Hover */
+.premium-card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+/* IMAGE */
+.project-image img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+/* TAG BADGE */
+.project-tag {
+  background: linear-gradient(90deg, #0d6efd, #6bc8ff);
+  padding: 6px 14px;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* TITLE */
+.project-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+/* TECH LIST */
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tech-list span {
+  background: rgba(255,255,255,0.12);
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* DESCRIPTION */
+.project-desc {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+/* BUTTONS */
+.project-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-primary {
+  background: #0d6efd;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-outline {
+  border: 1px solid #0d6efd;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+  .premium-card {
+    padding: 18px;
+  }
+}

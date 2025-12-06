@@ -1,0 +1,167 @@
+/* ================================
+   PREMIUM HOME HERO SECTION
+================================ */
+
+.home-section {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+/* Main Card */
+.home-card {
+  max-width: 1150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px;
+  border-radius: 25px;
+
+  /* GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+
+  animation: fadeUp 0.9s ease;
+}
+
+/* Text */
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-hello {
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.hero-name {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 5px 0 10px;
+}
+
+/* Gradient Name */
+.gradient-text {
+  background: linear-gradient(90deg, #0d6efd, #66c0ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-role {
+  font-size: 20px;
+  color: #b5b5b5;
+  margin-bottom: 20px;
+}
+
+.hero-about p {
+  opacity: 0.9;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Buttons */
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  padding: 10px 22px;
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #1a7bff;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  padding: 10px 22px;
+  border: 2px solid #0d6efd;
+  color: #0d6efd;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #0d6efd;
+  color: white;
+  transform: translateY(-3px);
+}
+
+
+/* IMAGE AREA */
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.premium-image {
+  padding: 12px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0d6efd55, #ffffff22);
+}
+
+.hero-image {
+  width: 280px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* 3D Hover */
+.hero-image:hover {
+  transform: rotateX(6deg) rotateY(-6deg) scale(1.05);
+}
+
+/* Fade Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .home-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 240px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-name {
+    font-size: 36px;
+  }
+}

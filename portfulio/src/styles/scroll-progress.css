@@ -1,0 +1,16 @@
+.progress-wrap{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:4px;
+  z-index:9999;
+  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+}
+.progress-bar{
+  height:100%;
+  background: linear-gradient(90deg,var(--accent), #6fb2ff);
+  width:0%;
+  box-shadow:0 4px 18px rgba(13,110,253,0.18);
+  transition: width .08s linear;
+}
