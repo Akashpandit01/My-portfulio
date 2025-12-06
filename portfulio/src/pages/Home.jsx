@@ -1,5 +1,6 @@
 import "../styles/home.css";
 import myphoto from "../assets/myphoto.jpg";
+import resume from "../assets/akashpandit0105.pdf"
 
 export default function Home() {
   return (
@@ -34,7 +35,11 @@ export default function Home() {
           </div>
 
           <div className="hero-buttons">
-            <a href="/resume" className="btn-primary">Download Resume</a>
+            <a   href={resume}   className="btn-primary"   target="_blank"
+  rel="noreferrer" download>
+  Download Resume
+</a>
+
             <a href="/projects" className="btn-outline">View Projects</a>
           </div>
         </div>
