@@ -40,7 +40,7 @@ export default function Home() {
   Download Resume
 </a>
 
-            <a href="/projects" className="btn-outline">View Projects</a>
+            <a href="#projects" className="btn-outline">View Projects</a>
           </div>
         </div>
 
