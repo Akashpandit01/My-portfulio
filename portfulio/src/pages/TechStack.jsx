@@ -14,6 +14,7 @@ import nodeLogo from "../assets/tech/node.png";
 import mysqlLogo from "../assets/tech/mysql.png";
 import mongodbLogo from "../assets/tech/mongodb.png";
 import firebaseLogo from "../assets/tech/firebase.png";
+import expressLogo from "../assets/tech/express.png";
 
 import gitLogo from "../assets/tech/git.png";
 import postmanLogo from "../assets/tech/postman.png";
@@ -34,7 +35,7 @@ export default function TechStack() {
     {
       name: "Express.js",
       desc: "Backend framework for APIs and middleware",
-      logo: nodeLogo,
+      logo: expressLogo,
     },
     {
       name: "MongoDB",
@@ -56,6 +57,11 @@ export default function TechStack() {
       desc: "Object-oriented backend applications",
       logo: javaLogo,
     },
+    {
+  name: "Spring Boot",
+  desc: "Building production-ready Java backend applications",
+  logo: springLogo,
+},
     {
       name: "CSS",
       desc: "Styling and creating visually appealing layouts",
@@ -91,6 +97,7 @@ export default function TechStack() {
       desc: "Version control for managing code changes",
       logo: gitLogo,
     },
+
   ];
 
   return (
