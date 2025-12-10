@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 import "../styles/navbar.css";
+import resume from "../assets/Akash-Pandit.pdf"
+
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -42,9 +44,16 @@ export default function Navbar() {
             Contact
           </Link>
 
-          <a href="#resume" className="resume-btn" onClick={closeMenu}>
-            Resume
-          </a>
+        <a
+  href="https://drive.google.com/file/d/1YR4n7XiXwYMXl1eCEGQIgIpZypttSLqc/view?usp=sharing"
+  className="resume-btn"
+  target="_blank"
+  rel="noopener noreferrer"
+  download={resume}
+  onClick={closeMenu}
+>
+  Resume
+</a>
         </nav>
       </div>
     </header>

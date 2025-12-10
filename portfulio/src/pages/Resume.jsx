@@ -11,14 +11,14 @@ export default function Resume() {
         <p>A detailed overview of my journey, skills, education, and projects</p>
 
         {/* ⭐ DOWNLOAD BUTTON */}
-        <a
+        {/* <a
           href="https://drive.google.com/file/d/1HyC2XzGPaTYTHjyrCdCiL03tDp3EVW65/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="download-btn"
         >
           ⬇️ Download Resume
-        </a>
+        </a> */}
       </div>
 
       <div className="resume-wrapper">

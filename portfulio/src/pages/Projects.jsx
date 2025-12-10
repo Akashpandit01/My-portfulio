@@ -6,8 +6,8 @@ function Projects() {
   return (
     <section className="projects fade-in" id="projects">
       <div className="section-heading">
-        <h2 className="section-title">Projects</h2>
-        <p className="section-subtitle">
+        <h2 className="section-title title">Projects</h2>
+        <p className="section-subtitle"> 
           Beautifully crafted full-stack & frontend projects based on real-world needs.
         </p>
       </div>

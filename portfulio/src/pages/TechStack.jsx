@@ -21,42 +21,91 @@ import vscodeLogo from "../assets/tech/vscode.jpeg";
 
 export default function TechStack() {
   const technologies = [
-    { name: "HTML", logo: htmlLogo },
-    { name: "CSS", logo: cssLogo },
-    { name: "JavaScript", logo: jsLogo },
-    { name: "React.js", logo: reactLogo },
-    { name: "Bootstrap", logo: bootstrapLogo },
-    { name: "Tailwind CSS", logo: tailwindLogo },
-
-    { name: "Java", logo: javaLogo },
-    { name: "Spring Boot", logo: springLogo },
-    { name: "Node.js", logo: nodeLogo },
-
-    { name: "MySQL", logo: mysqlLogo },
-    { name: "MongoDB", logo: mongodbLogo },
-    { name: "Firebase", logo: firebaseLogo },
-
-    { name: "Git & GitHub", logo: gitLogo },
-    { name: "Postman", logo: postmanLogo },
-    { name: "VS Code", logo: vscodeLogo },
+    {
+      name: "React.js",
+      desc: "Building dynamic and interactive UI components",
+      logo: reactLogo,
+    },
+    {
+      name: "Node.js",
+      desc: "Server-side JavaScript runtime for scalable apps",
+      logo: nodeLogo,
+    },
+    {
+      name: "Express.js",
+      desc: "Backend framework for APIs and middleware",
+      logo: nodeLogo,
+    },
+    {
+      name: "MongoDB",
+      desc: "Flexible NoSQL database for modern applications",
+      logo: mongodbLogo,
+    },
+    {
+      name: "Firebase",
+      desc: "Real-time database and authentication services",
+      logo: firebaseLogo,
+    },
+    {
+      name: "MySQL",
+      desc: "Relational database management using SQL",
+      logo: mysqlLogo,
+    },
+    {
+      name: "Java",
+      desc: "Object-oriented backend applications",
+      logo: javaLogo,
+    },
+    {
+      name: "CSS",
+      desc: "Styling and creating visually appealing layouts",
+      logo: cssLogo,
+    },
+    {
+      name: "HTML",
+      desc: "Structuring web pages with semantic markup",
+      logo: htmlLogo,
+    },
+    {
+      name: "JavaScript",
+      desc: "Writing modern and interactive web applications",
+      logo: jsLogo,
+    },
+    {
+      name: "Tailwind CSS",
+      desc: "Utility-first CSS framework for fast UI design",
+      logo: tailwindLogo,
+    },
+    {
+      name: "Bootstrap",
+      desc: "Prebuilt component library for responsive pages",
+      logo: bootstrapLogo,
+    },
+    {
+      name: "TypeScript",
+      desc: "Static typing for more robust JavaScript apps",
+      logo: jsLogo,
+    },
+    {
+      name: "Git",
+      desc: "Version control for managing code changes",
+      logo: gitLogo,
+    },
   ];
 
   return (
-    <section className="skills-section" id="skills">
-      <div className="skills-header">
-        <h2 className="skills-title">Technology Stack</h2>
-        <p className="skills-subtitle">
-          Tools that I use to code, build and implement
-        </p>
-      </div>
+    <section className="skill-section">
+      <h2 className="title">Tech Stack</h2>
 
-      <div className="skills-grid">
-        {technologies.map((tech, index) => (
-          <div key={index} className="skill-card fade-in-up">
-            <div className="skill-icon-wrap">
-              <img src={tech.logo} alt={tech.name} className="skill-icon" />
+      <div className="tech-grid">
+        {technologies.map((t, i) => (
+          <div className="tech-card" key={i}>
+            <img src={t.logo} alt={t.name} className="tech-icon" />
+
+            <div className="tech-info">
+              <h3>{t.name}</h3>
+              <p>{t.desc}</p>
             </div>
-            <p className="skill-name">{tech.name}</p>
           </div>
         ))}
       </div>

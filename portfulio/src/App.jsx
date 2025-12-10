@@ -38,10 +38,10 @@ export default function App() {
         <section id="contact" data-aos="fade-up">
           <Contact />
         </section>
-
+{/* 
         <section id="resume" data-aos="fade-up">
           <Resume />
-        </section>
+        </section> */}
       </main>
 
       <Footer />

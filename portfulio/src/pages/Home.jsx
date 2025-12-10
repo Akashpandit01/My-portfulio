@@ -1,6 +1,6 @@
 import "../styles/home.css";
 import myphoto from "../assets/myphoto.jpg";
-import resume from "../assets/akashpandit0105.pdf"
+import resume from "../assets/Akash-Pandit.pdf"
 
 export default function Home() {
   return (
