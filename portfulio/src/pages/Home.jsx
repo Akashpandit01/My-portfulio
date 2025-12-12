@@ -1,8 +1,43 @@
 import "../styles/home.css";
 import myphoto from "../assets/myphoto.jpg";
-import resume from "../assets/Akash-Pandit.pdf"
+import resume from "../assets/Akash-Pandit.pdf";
 
 export default function Home() {
+
+  // 1️⃣ Download Only Function
+  const handleDownload = () => {
+    fetch(resume)
+      .then(response => response.blob())
+      .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "Akash-Pandit-Resume.pdf";
+        link.click();
+        window.URL.revokeObjectURL(url);
+      });
+  };
+
+  // 2️⃣ Open in New Tab + Auto Download Function
+  const handleOpenAndDownload = (e) => {
+    e.preventDefault(); // prevent default <a> behavior
+
+    // Step 1: Open PDF in a new tab
+    window.open(resume, "_blank");
+
+    // Step 2: Trigger download
+    fetch(resume)
+      .then(response => response.blob())
+      .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "Akash-Pandit-Resume.pdf";
+        link.click();
+        window.URL.revokeObjectURL(url);
+      });
+  };
+
   return (
     <section className="home-section" id="home">
       <div className="home-card premium-glass">
@@ -24,8 +59,8 @@ export default function Home() {
 
             <p>
               I hold a B.E. in Computer Engineering and have worked on multiple
-              industry-level projects involving full-stack development,
-              analytics dashboards, authentication, and database-driven systems.
+              industry-level projects involving web app development, analytics
+              dashboards, authentication, and database-driven systems.
             </p>
 
             <p>
@@ -35,12 +70,22 @@ export default function Home() {
           </div>
 
           <div className="hero-buttons">
-            <a   href={resume}   className="btn-primary"   target="_blank"
-  rel="noreferrer" download>
-  Download Resume
-</a>
 
-            <a href="#projects" className="btn-outline">View Projects</a>
+            {/* 🔹 Download ONLY */}
+            <button className="btn-primary" onClick={handleOpenAndDownload}>
+              Download Resume
+            </button>
+
+            {/* 🔹 Open + Download */}
+            <a
+              href="#"
+              className="btn-outline"
+              onClick={handleOpenAndDownload}
+            >
+              View Resume
+            </a>
+
+           
           </div>
         </div>
 
@@ -49,6 +94,7 @@ export default function Home() {
             <img src={myphoto} alt="Akash Pandit" className="hero-image" />
           </div>
         </div>
+
       </div>
     </section>
   );
