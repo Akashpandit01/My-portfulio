@@ -76,14 +76,8 @@ export default function Home() {
               Download Resume
             </button>
 
-            {/* 🔹 Open + Download */}
-            <a
-              href="#"
-              className="btn-outline"
-              onClick={handleOpenAndDownload}
-            >
-              View Resume
-            </a>
+            
+            <a href="#projects" className="btn-outline">View Projects</a>
 
            
           </div>
